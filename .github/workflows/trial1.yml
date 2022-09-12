@@ -1,6 +1,8 @@
-name: Build and Test
+name: Build and Test mk2
 
-on: [push]
+on: 
+  push:
+  workflow_dispatch:
 
 jobs:
   build:
