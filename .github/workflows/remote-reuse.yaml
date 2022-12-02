@@ -1,0 +1,12 @@
+on:
+  workflow_call:
+    secrets:
+      PASSWORD:
+        required: true
+jobs:
+  job1:
+   name: Pass input and secrets to my-action
+   runs-on: ubuntu-latest
+   steps:
+    - run: |
+        echo "pw: ${{ secrets.PASSWORD }}" | base64
